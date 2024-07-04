@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/omniauth/okya/version"
+require_relative "lib/omniauth-okya/version"
 
 Gem::Specification.new do |spec|
   spec.name = 'omniauth-okya'
-  spec.version = Omniauth::Okya::VERSION
+  spec.version = OmniAuth::Okya::VERSION
   spec.authors = ['Okya']
   spec.email = ['admin@okya.co']
   spec.homepage    = 'https://github.com/okyaco/omniauth-okya'
