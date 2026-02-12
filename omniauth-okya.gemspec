@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "OmniAuth OAuth2 strategy for the Okya."
   spec.description = "OmniAuth OAuth2 strategy for the Okya."
 
-  spec.required_ruby_version = ">= 3.3.4"
+  spec.required_ruby_version = ">= 3.3.3"
 
   spec.require_paths = ["lib"]
   spec.add_runtime_dependency "omniauth"
