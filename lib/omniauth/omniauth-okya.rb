@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-require 'omniauth/strategies/okya'
+require "omniauth/strategies/okya"
