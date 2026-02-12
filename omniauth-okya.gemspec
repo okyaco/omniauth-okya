@@ -5,13 +5,13 @@ require_relative 'lib/omniauth-okya/version'
 Gem::Specification.new do |spec|
   spec.name = 'omniauth-okya'
   spec.version = OmniAuth::Okya::VERSION
-  spec.authors = ['Htoo']
-  spec.email = ['htooeainlwin12@gmail.com']
-  spec.homepage    = 'https://github.com/htoo-eain-lwin/omniauth-okya'
+  spec.authors = ['Okya']
+  spec.email = ['hello@okya.co']
+  spec.homepage    = 'https://github.com/okyaco/omniauth-okya'
   spec.summary     = 'OmniAuth OAuth2 strategy for the Okya.'
   spec.description = 'OmniAuth OAuth2 strategy for the Okya.'
 
-  spec.required_ruby_version = '>= 3.3.3'
+  spec.required_ruby_version = '>= 3.4.1'
 
   spec.require_paths = ['lib']
   spec.add_runtime_dependency 'omniauth'

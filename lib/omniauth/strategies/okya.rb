@@ -104,6 +104,12 @@ module OmniAuth
         fail!(:token_validation_error, e)
       end
 
+      def callback_url
+        # Fixes regression in omniauth-oauth2 v1.4.0 by https://github.com/intridea/omniauth-oauth2/commit/85fdbe117c2a4400d001a6368cc359d88f40abc7
+        # https://github.com/zquestz/omniauth-google-oauth2/blob/d3f1c912e438ccf6aba577c66772bf2e37373d73/lib/omniauth/strategies/google_oauth2.rb#L110-L112
+        options[:callback_url] || (full_host + callback_path)
+      end
+      
       private
 
       def jwt_validator
