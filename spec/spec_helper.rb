@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "omniauth/okya"
+require "omniauth/omniauth-okya"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

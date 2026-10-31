@@ -53,6 +53,9 @@ module OmniAuth
           given_name: raw_info['given_name'],
           family_name: raw_info['family_name'],
           email: raw_info['email'],
+          preferred_username: raw_info['preferred_username'],
+          phone: raw_info['phone'],
+          birthdate: raw_info['birthdate'],
           created_at: raw_info['created_at'],
           updated_at: raw_info['updated_at'],
           role: raw_info['role']
@@ -104,6 +107,12 @@ module OmniAuth
         fail!(:token_validation_error, e)
       end
 
+      def callback_url
+        # Fixes regression in omniauth-oauth2 v1.4.0 by https://github.com/intridea/omniauth-oauth2/commit/85fdbe117c2a4400d001a6368cc359d88f40abc7
+        # https://github.com/zquestz/omniauth-google-oauth2/blob/d3f1c912e438ccf6aba577c66772bf2e37373d73/lib/omniauth/strategies/google_oauth2.rb#L110-L112
+        options[:callback_url] || (full_host + callback_path)
+      end
+      
       private
 
       def jwt_validator
