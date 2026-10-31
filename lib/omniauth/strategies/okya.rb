@@ -53,7 +53,7 @@ module OmniAuth
           given_name: raw_info['given_name'],
           family_name: raw_info['family_name'],
           email: raw_info['email'],
-          username: raw_info['preferred_username'],
+          preferred_username: raw_info['preferred_username'],
           phone: raw_info['phone'],
           birthdate: raw_info['birthdate'],
           created_at: raw_info['created_at'],
