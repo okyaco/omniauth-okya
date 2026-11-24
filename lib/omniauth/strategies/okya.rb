@@ -56,6 +56,7 @@ module OmniAuth
           preferred_username: raw_info['preferred_username'],
           phone: raw_info['phone'],
           birthdate: raw_info['birthdate'],
+          gender: raw_info['gender'],
           created_at: raw_info['created_at'],
           updated_at: raw_info['updated_at'],
           role: raw_info['role']
